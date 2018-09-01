@@ -1,5 +1,164 @@
 @import url('https://fonts.googleapis.com/css?family=Gabriela');
 
+@media screen and (max-width:680px){
+  div.container {
+    width: 100%;
+  }
+  a.header1link {
+    display: none;
+  }
+  img.web {
+    display: none;
+  }
+  img.websmall {
+    display: block;
+  }
+  li ul.submenu {
+    width: 100vw;
+    float: left;
+    left: 0px;
+    top: 65px;
+  }
+  .wrap1 ul.menu > li {
+      position: static;
+  }
+  h1.caption {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  div.main1 {
+    margin-bottom: 43px;
+    display: inline-block;
+  }
+  div.maincontent div {
+    width: 340px;
+  }
+  a.button {
+    width: 175px;
+    margin: auto;
+    margin-top: -7px;
+  }
+  div.main1 div img {
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  div.main div h2{
+    font-size: 21px;
+    line-height: 0.5em;
+  }
+  div.article p {
+    width: 340px;
+    font-weight: 600;
+  }
+  div.article p:last-child {
+    display: none;
+    font-size: 16px;
+    font-family:
+  }
+  div.article {
+    margin-bottom: 32px;
+  }
+  div.creators div {
+    width: auto;
+    display: inline-block;
+  }
+
+  .creators div:first-child {
+    float: left;
+    text-align: left;
+  }
+
+  .creators div:last-child {
+    text-align: right;
+  }
+  body footer {
+    height: 72px;
+  }
+  a.topbutton {
+    display: none;
+  }
+}
+
+@media screen and (max-width:450px){
+  div.container {
+    width: 100%;
+  }
+  a.header1link {
+    display: none;
+  }
+  img.web {
+    display: none;
+  }
+  img.websmall {
+    display: block;
+    margin: 10px 0px 0px 10px;
+  }
+  li ul.submenu {
+    width: 100vw;
+    float: left;
+    left: 0px;
+    top: 65px;
+  }
+  .wrap1 ul.menu > li {
+      position: static;
+  }
+  h1.caption {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  div.main1 {
+    margin-bottom: 43px;
+    display: inline-block;
+  }
+  div.maincontent div {
+    width: calc(100% - 110px);
+    margin: auto;
+  }
+  a.button {
+    width: 175px;
+    margin: auto;
+    margin-top: -7px;
+  }
+  div.main1 div img {
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  div.main div h2{
+    font-size: 21px;
+    line-height: 0.5em;
+  }
+  div.article p {
+    width: 340px;
+    font-weight: 600;
+  }
+  div.article p:last-child {
+    display: none;
+    font-size: 16px;
+    font-family:
+  }
+  div.article p {
+    margin-bottom: 32px;
+    width: calc(100% - 110px);
+  }
+  div.creators div {
+    width: auto;
+    display: inline-block;
+  }
+  .creators div:first-child {
+    float: left;
+    text-align: left;
+  }
+  .creators div:last-child {
+    text-align: right;
+  }
+  body footer {
+    height: 72px;
+  }
+  a.topbutton {
+    display: none;
+  }
+}
+
 html {
   font-family: "Gabriela";
   font-style: normal;
@@ -27,11 +186,15 @@ header {
 .wrap1 {
   width: 100%;
   height: 100%;
-  display: inline-block;
 }
 .web {
   float:left;
   margin: 4px 15px 0px 20px;
+}
+.websmall {
+  display: none;
+  float: left;
+  margin: 9px 0px 0px 20px;
 }
 .header1link {
   color: black;
@@ -40,45 +203,63 @@ header {
 }
 
 .menu {
-    float: right;
-    margin: auto;
-    font-size: 21px;
-    position: relative;
-    height: 100%;
+  float: right;
 }
-.menu ol {
-    display: none;
-    margin-top: 13px;
-    margin-left: -23px;
-    position: absolute;
-    background-color: #333333;
-    width: 170px;
-}
-.menu li {
-    float: left;
+
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
     list-style: none;
-    padding: 24px 23px 14px 23px;
-    text-transform: uppercase;
 }
-.menu li:hover {
-    background-color: #333333;
+ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+    float: none;
 }
-.menu li:hover>ol {
+ul.menu > li {
+    float: left;
+    position: relative;
+}
+ul.menu > li > a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 21px 25px 17px 20px;
+    transition: all .5s ease .2s;
+}
+ul.menu > li > a:hover {
+    background-color: #333;
+}
+ul.submenu {
+    display: none;
+    position: absolute;
+    width: 213px;
+    top: 65px;
+    left: 0;
+    background-color: white;
+}
+ul.submenu > li {
     display: block;
 }
-.menu ol>li{
-    padding: 16px 0px 0;
-    list-style: inside decimal;
+ul.submenu > li > a {
+    display: block;
+    padding-left: 15px;
+    padding-top: 7px;
     color: white;
-    text-transform: capitalize;
-    margin-left: -16px;
-}
-.menu ol>li:last-child{
-  padding: 8px 0px 16px 0px;
-}
-.menu li a {
+    background-color: #333;
     text-decoration: none;
-    color: white;
+    height: 35px;
+    transition: all .5s ease .2s;
+}
+
+ul.submenu > li > a:hover {
+    background-color: green;
+    color: black;
+}
+ul.menu > li:hover > ul.submenu {
+    display: block;
 }
 
 main {
@@ -102,14 +283,6 @@ main {
   margin-bottom: 57px;
 }
 
-.main1 div {
-  width: 26%;
-  float: left;
-  margin-left: 5%;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .main1 div img {
   margin-bottom: 16px;
   height: 90px;
@@ -117,6 +290,23 @@ main {
 
 .main div h2{
   font-size: 21px;
+}
+
+.maincontent {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+
+.maincontent div {
+  display: inline-block;
+  width: 173px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.maincontent div:nth-child(2) {
+  margin: 0px 55px 0px 55px;
 }
 
 .button {
@@ -129,6 +319,12 @@ main {
   text-decoration: none;
   font-size: 21px;
   padding: 11px 0px 0px 0px;
+  transition: all .5s ease .2s;
+}
+
+.button:hover {
+    color: black;
+    background: green;
 }
 
 .article {
@@ -138,17 +334,17 @@ main {
   margin-bottom: 150px;
 }
 
-.article div {
-  width: 47%;
+.article p {
+  width: calc(50% - 15px);
   display: inline-block;
   text-align: left;
 }
 
-.article div:first-child {
-  margin-right: 10px;
+.article p:first-child {
+  margin-left: 10px;
 }
 
-.article div:last-child {
+.article p:last-child {
   margin-left: 10px;
 }
 
