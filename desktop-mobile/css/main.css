@@ -13,13 +13,13 @@
   img.websmall {
     display: block;
   }
-  li ul.submenu {
+  li ol.submenu {
     width: 100vw;
     float: left;
     left: 0px;
     top: 65px;
   }
-  .wrap ul.menu > li {
+  .wrap ol.menu > li {
       position: static;
   }
   h1.caption {
@@ -93,13 +93,13 @@
     display: block;
     margin: 10px 0px 0px 10px;
   }
-  li ul.submenu {
+  li ol.submenu {
     width: 100vw;
     float: left;
     left: 0px;
     top: 65px;
   }
-  .wrap ul.menu > li {
+  .wrap ol.menu > li {
       position: static;
   }
   h1.caption {
@@ -206,61 +206,75 @@ header {
   float: right;
 }
 
-ul {
-    display: block;
+ol {
+    display: inline-block;
     margin: 0;
     padding: 0;
     list-style: none;
 }
-ul:after {
+ol:after {
     display: block;
     content: ' ';
     clear: both;
     float: none;
 }
-ul.menu > li {
+ol.menu > li {
     float: left;
     position: relative;
     transition: all .5s ease .2s;
 }
-ul.menu > li > a {
+ol.menu > li > a {
     display: block;
     color: white;
     text-decoration: none;
     padding: 21px 25px 17px 20px;
 }
-ul.menu li:hover {
+ol.menu li:hover {
     background-color: #333;
 }
 
-ul.submenu {
+ol.submenu {
     display: none;
     position: absolute;
     width: 213px;
     top: 65px;
     left: 0;
     background-color: white;
-}
-ul.submenu > li {
-    display: block;
-}
-ul.submenu > li > a {
-    display: block;
-    padding-left: 15px;
-    padding-top: 7px;
-    color: white;
-    background-color: #333;
-    text-decoration: none;
-    height: 35px;
-    transition: all .5s ease .2s;
+    text-align: left;
+  }
+
+ol.submenu > li {
+  padding-left: 15px;
+  color: white;
+  transition: all .5s ease .2s;
 }
 
-ul.submenu > li > a:hover {
-    background-color: green;
-    color: black;
+ol.submenu > li:hover {
+  background-color: green;
 }
-ul.menu > li:hover > ul.submenu {
-    display: block;
+
+ol.submenu > li > a {
+    display: inline-block;
+    padding-left: 0px;
+    padding-top: 7px;
+    color: white;
+    text-decoration: none;
+    height: 35px;
+}
+
+ol.submenu {
+    list-style: inside decimal;
+}
+
+ol.menu:hover li ol {
+    background-color: #333;
+}
+ol.menu > li:hover > ol.submenu {
+    display: inline-block;
+}
+
+.menu:hover .submenu {
+  display: inline-block;
 }
 
 main {
