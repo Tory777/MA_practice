@@ -269,12 +269,9 @@ ol.submenu {
 ol.menu:hover li ol {
     background-color: #333;
 }
+
 ol.menu > li:hover > ol.submenu {
     display: inline-block;
-}
-
-.menu:hover .submenu {
-  display: inline-block;
 }
 
 main {
