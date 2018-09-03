@@ -251,6 +251,7 @@ ol.submenu > li {
 
 ol.submenu > li:hover {
   background-color: green;
+  color: black;
 }
 
 ol.submenu > li > a {
@@ -260,6 +261,11 @@ ol.submenu > li > a {
     color: white;
     text-decoration: none;
     height: 35px;
+    transition: all .5s ease .2s;
+}
+
+ol.submenu > li > a:hover {
+    color: white;
 }
 
 ol.submenu {
