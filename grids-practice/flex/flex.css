@@ -1,0 +1,67 @@
+.parent div {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.newsfeed, .navigationbar {
+  color: white;
+}
+
+.parent {
+display: flex;
+font-size: 2rem;
+flex-flow: row wrap;
+box-sizing: border-box;
+width: 100%;
+border: 1px solid black;
+}
+
+.logo, .listofsomething, .footer {
+    background: yellow;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  line-height: 100px;
+}
+.menu {
+  background: red;
+  height: 100px;
+  width: calc(100% - 100px);
+  line-height: 100px;
+  border-bottom: 1px solid black;
+}
+.child {
+  display: flex;
+  flex-flow: row wrap;
+  width: calc(100% - ((100% - 100px) * 0.35));
+  box-sizing: border-box;
+}
+.newsfeed {
+  background: brown;
+  width: 100px;
+  height: 300px;
+  padding-top: calc(150px - 2rem);
+  border-bottom: 1px solid black;
+}
+.listofsomething {
+  height: 300px;
+  width: calc(100% - 100px);
+  line-height: 300px;
+  border: 1px solid black;
+  border-top: none;
+}
+.footer {
+  height: 150px;
+  width: 100%;
+  line-height: 150px;
+  border-right: 1px solid black;
+}
+.navigationbar {
+  background: gray;
+  height: 450px;
+  width: calc((100% - 100px) * 0.35);
+  line-height: 450px;
+}
