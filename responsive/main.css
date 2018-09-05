@@ -104,14 +104,12 @@
     }
     body main div.fifth {
     text-align: center;
+    width: 100%;
+    display: block;
     }
-    body main div.fifth div.colored:nth-child(1) {
-    width: calc(33% + 1px);
-    float: left;
-    }
-    body main div.fifth div.colored:nth-child(2) {
-    width: calc(33% + 1px);
-    float: left;
+    body main div.fifth div.colored {
+    width: 33%;
+    display: inline-block;
     }
 }
     @media screen and (min-width: 1800px) {
