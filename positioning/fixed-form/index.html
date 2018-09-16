@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>fixed-form</title>
+  <style>
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Verdana, sans-serif;
+      overflow: auto;
+    }
+    .wrapper {
+      width: 500px;
+      background-color: rgba(0,0,0,.7);
+      height: 600px;
+      position: fixed;
+      transform: translateX(calc(50vw - 50%)) translateY(calc(50vh - 50%));
+      text-align: center;
+    }
+    object {
+      position: relative;
+      margin: auto;
+      width: 150px;
+
+      margin-top: 50px;
+    }
+    form {
+      margin-top: 100px;
+    }
+    img {
+      width: 30px;
+    }
+    input {
+      background-color: rgba(0,0,0,.00);
+      color: rgba(255,255,255,1);
+      outline:none;
+      border: none;
+      opacity: 1;
+      font-size: 1.3rem;
+    }
+    hr {
+      opacity: 0.3;
+    }
+    input[type="submit"] {
+      width: 76%;
+      height: 42px;
+      margin-top: 70px;
+      cursor: pointer;
+      color: white;
+      border: 0;
+      border-radius: 35px;
+      background: #ff3366;
+      transition: 1s;
+    }
+    input[type="submit"]:hover {
+      background: green;
+      box-shadow: 0 2px 20px rgba(0,0,0,.25),inset 0 1.8px 0px rgba(255,255,255,.6), 0 2px 1px rgba(0,0,0,.1),inset 0 0 17px rgba(0,0,0,.1);
+    }
+    p {
+      color: white;
+      opacity: 0.6;
+      display: inline-block;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+      margin-left: 10px;
+    }
+    img[alt="background"] {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+    <div class="wrapper">
+        <object type="image/svg+xml" data="img/check-mark.svg"></object>
+        <form action="#" class="form">
+          <img src="img/user.png" alt="user">
+	        <input type="text" name="username" placeholder="Username" /><hr>
+          <img src="img/pass.png" alt="password">
+	        <input type="password" name="password" placeholder="Password" /><hr>
+	        <input type="submit" name="submit" value="Sign in"></input>
+        </form>
+        <p>Don't have an account?</p><a href="">Sign up</a>
+    </div>
+    <img src="img/bg.jpg" alt="background">
+</body>
+</html>

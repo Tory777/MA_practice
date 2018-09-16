@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>positioning</title>
+  <style>
+    body {
+      width: 100%;
+      background: #333333;
+      height: 100vh;
+      z-index: 1;
+      margin: 0;
+      padding: 0;
+      font-family: Verdana, sans-serif;
+    }
+    .modal {
+      margin: auto;
+      width: 700px;
+      margin-top: 150px;
+      text-align: center;
+      position: relative;
+    }
+    h1 {
+      font-size: 4rem;
+      line-height: 4rem;
+      width: 80%;
+      margin: auto;
+    }
+    .window {
+      width: 100%;
+      border: 30px solid #dddddd;
+      border-radius: 10px;
+      box-shadow: 0px 0px 40px black;
+      box-sizing: border-box;
+      display: block;
+      background: #fff;
+    }
+    .col{
+      text-align: left;
+      margin-left: 15px;
+      width: 70%;
+    }
+    a {
+      color: black;
+    }
+    img[alt="warning"] {
+      width: 150px;
+      float: right;
+      transform: translateY(-100%);
+    }
+    a[target="_self"] {
+
+    }
+    img[alt="close"] {
+      width: 50px;
+      float: right;
+      position: absolute;
+      left: 673px;
+      top: 40px;
+    }
+    .comment {
+      position: absolute;
+      width: 80px;
+      height: 40px;
+      background: #0f0f0f;
+      opacity: 0.5;
+      color: white;
+    }
+    .comment h2 {
+      color: blue;
+    }
+
+    .title {
+    transform: translateX(300px) translateY(-180px);
+    }
+    .title h2 {
+      transform: translateY(10px) rotate(-90deg);
+      text-align: left;
+    }
+    .comment p {
+      margin: auto;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .shadow {
+      left: 100px;
+    }
+    .label {
+      width: 120px;
+      left: 535px;
+      transform: translateY(100px);
+    }
+    .label h2 {
+      transform: translateY(-110px) rotate(90deg);
+    }
+    .close {
+      transform: translateX(820px) translateY(-20px);
+    }
+    .close h2 {
+      transform: translateX(-90px) translateY(-50px);
+    }
+    .size {
+      transform: translateX(-180px) translateY(-150px);
+    }
+    .size h2 {
+      min-width: 300px;
+    }
+    .size h2:nth-child(3) {
+      transform: rotate(90deg) translateY(60px) translateX(-90px);
+    }
+    .size h2:nth-child(2) {
+      transform: translateY(-115px) translateX(-20px);
+    }
+    .size h2:nth-child(4) {
+      transform: translateY(-67px) translateX(-20px);
+    }
+      </style>
+</head>
+<body>
+    <div class="comment shadow"><p>Shadow</p></div>
+    <div class="modal">
+      <h1>Catch404</h1>
+      <div class="title comment"><p>Title</p><h2>- - - -</h2></div>
+      <a href="https://www.youtube.com/watch?v=_wRt9HNDswk" target="_self"><div class="close comment"><p>Close</p><h2>- - - -</h2></div><img src="img/close.png" alt="close"></a>
+      <div class="window">
+        <div class="col">
+        <h5>404 ERROR. OOPS!</h5>
+        <p>We did a quick check and the page you requested could not be found. Let us know about this via our <b><a href="">contact form.</a></b></p>
+        <p>If you would like to see if this file's still somewhere else on the site check out our <b><a href="https://www.google.com/" target="_blank">search page.</a></b></p>
+      </div>
+      <a href=""><div class="label comment"><p>Button Label</p><h2>- - - - -</h2></div><img src="img/warning.gif" alt="warning"></a>
+      </div>
+      <div class="size comment"><p>Size</p><h2>- - - -</h2><h2>- - - - - - - -</h2><h2>- - - -</h2></div>
+    </div>
+</body>
+</html>
