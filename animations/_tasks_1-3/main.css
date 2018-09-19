@@ -1,0 +1,180 @@
+@keyframes spin-left {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-360deg);
+    }
+}
+@keyframes spin-right {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+@keyframes changing-width {
+  40%  {
+    transform: scale(1.2);
+  }
+	80%  {
+    transform: scale(0.8);
+  }
+	100%  {
+    transform: scale(1);
+  }
+}
+@keyframes tick {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+ margin: 0;
+ padding: 0;
+ width: 100%;
+ text-align: center;
+ display: block;
+}
+
+.first-task, .third-task {
+  text-align: center;
+  width: 600px;
+  height: 600px;
+  border: 2px solid red;
+  margin: auto;
+  background: black;
+}
+
+.rotate-left {
+  width: 600px;
+  height: 100px;
+  display: block;
+  margin: auto;
+  margin-top: 248px;
+  transform: translateY(-50%);
+  animation-name: spin-left;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  box-sizing: inherit;
+}
+
+.rotate-right {
+  width: 100px;
+  height: 100px;
+  animation-name: spin-right;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  box-sizing: inherit;
+  background: blue;
+}
+
+img[alt="heart"] {
+  width: 200px;
+  margin-top: 200px;
+  animation-name: changing-width;
+  animation-duration: 400ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+.second-task {
+  width: 100%;
+  height: 600px;
+  border: 2px solid red;
+  background: #a0a0a0;
+  display: block;
+}
+
+.box {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 300px 20px 0px 20px;
+  text-align: center;
+  position: relative;
+  border: 1px solid;
+}
+
+.box-top {
+  width: 100%;
+  height: 20px;
+  background: #395874;
+  border: 2px solid white;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 2;
+}
+
+.fill {
+  background: #e2a669;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+img[alt="the crazy man yelling in the mountains"] {
+  width: 80%;
+  z-index: 0;
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  transition: 2s;
+}
+
+.box:hover img {
+  top: -120px;
+}
+
+.scoreboard {
+  background: url(img/scoreboard.jpg) no-repeat center top / cover;
+  width: 350px;
+  height: 350px;
+  margin: auto;
+  border-radius: 50%;
+  margin-top: 125px;
+  position: relative;
+}
+
+.hour-hand {
+  width: 80px;
+  height: 10px;
+  background: #000;
+  transform: translateY(168px) translateX(173px) rotate(-10deg);
+  border-radius: 25%;
+  position: absolute;
+}
+
+.minute-hand {
+  width: 110px;
+  height: 5px;
+  background: #000;
+  transform: translateY(160px) translateX(67px) rotate(197deg);
+  border-radius: 25%;
+  position: absolute;
+}
+
+.second-hand {
+  width: 260px;
+  height: 1px;
+  margin: auto;
+  position: absolute;
+  top: 177px;
+  left: 47px;
+  animation: tick 60000ms steps(60) infinite;
+}
+
+.second-hand div {
+  width: 50%;
+  height: 1px;
+}
+
+.second-hand div:last-child {
+  background: red;
+}
